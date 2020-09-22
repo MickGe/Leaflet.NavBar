@@ -1,9 +1,14 @@
-import L from "leaflet";
 /*
  *  Simple navigation control that allows back and forward navigation through map's view history
  */
 
-(function () {
+import "./Leaflet.NavBar.css";
+
+(function (L) {
+	if (typeof L === "undefined") {
+		throw new Error("Leaflet must be included first");
+	}
+
 	L.Control.NavBar = L.Control.extend({
 		options: {
 			position: "topleft",
@@ -192,4 +197,4 @@ import L from "leaflet";
 	L.control.navbar = function (options) {
 		return new L.Control.NavBar(options);
 	};
-})();
+})(L); // eslint-disable-line no-undef
