@@ -2,8 +2,6 @@
  *  Simple navigation control that allows back and forward navigation through map's view history
  */
 
-import "./Leaflet.NavBar.css";
-
 (function (L) {
 	if (typeof L === "undefined") {
 		throw new Error("Leaflet must be included first");
