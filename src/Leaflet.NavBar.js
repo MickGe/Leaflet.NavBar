@@ -104,7 +104,6 @@
 		},
 
 		_goFwd: function () {
-			//INFO: change equality
 			if (this._curIndx !== this._viewHistory.length - 1) {
 				this._map.off("moveend", this._updateHistory, this);
 				this._map.once(
@@ -177,7 +176,6 @@
 		},
 
 		_updateDisabled: function () {
-			//INFO: change equality
 			if (this._curIndx === this._viewHistory.length - 1) {
 				this._setFwdEnabled(false);
 			} else {
